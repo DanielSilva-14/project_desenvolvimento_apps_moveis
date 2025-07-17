@@ -1,0 +1,361 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f5f2f2; /* Light grey background */
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    margin: 0;
+    max-width: 400px;
+}
+
+textarea {
+    font-family: inherit;
+    background-color: transparent;
+    border: 0.1rem solid;
+    border-image: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    border-image-slice: 1;
+    min-width: 400px;
+    min-height: 7em;
+    box-sizing: border-box; /* to fix padding with 100% width */
+    padding: 0.75em 1em;
+    color: #424242;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+input[type=date], input[type=datetime-local], select {
+    background-color: transparent;
+    padding: 0.75em 1em;
+    color: #ffffff;
+    border: 0.1rem solid;
+    border-image: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    border-image-slice: 1;
+}
+
+select option {
+    color: #202020;
+}
+
+select[multiple] option {
+    color: #ffffff;
+}
+
+input[type=text], input[type=password] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 0.1em solid;
+    border-image: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    border-image-slice: 1;
+    width: 100%;
+    box-sizing: border-box; /* to fix padding with 100% width */
+    padding: 0.75em 1em;
+    color: #ffffff;
+    font-size: inherit;
+    max-width: 400px;
+    margin-top: 1rem;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow around the form */
+    width: 300px; /* Fixed width */
+}
+
+.button {
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    padding: 0.75em 1.5em;
+    background: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    font-size: inherit;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    cursor: pointer;
+}
+
+.auth-error {
+    color: red; /* Red text for authentication errors */
+    margin-bottom: 10px; /* Space below the error message */
+}
+
+.password-visibility {
+    cursor: pointer; /* Pointer cursor for the visibility toggle */
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(193, 19, 209) 0%, rgba(45,253,245,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-title {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around; /* Distribute the space evenly */
+    width: 70%;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.logout {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    background-image: linear-gradient(135deg, #4a1f9f 0%, #5ce1e6 100%);
+    width: 300px;
+    height: 100vh;  /* Ensure it takes full height */
+    float: left;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #424242; /* Ensure text is visible if needed */
+}
+
+.page-selector {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 4em;
+}
+
+.page-link {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.page-link:hover {
+    color: #0F1314;
+    cursor: pointer;
+}
+
+.selected {
+    background: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    font-size: 14px;
+}
+
+.user a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.dashboard-content {
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: scroll;
+}
+
+#default {
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    font-size: x-large;
+}
+
+.container-label {
+    font-size: x-large;
+    background: linear-gradient(135deg, #4a1f9f 5%, #5ce1e6 100%);
+    background-clip: text;
+    color: transparent;
+    text-transform: capitalize;
+}
+
+.container {
+    background-color: #424242;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 1em;
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-container {
+    width: fit-content;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+    color: #ffffff;
+}
+
+.action-info {
+    margin-top: 0.75rem;
+    color: #999999;
+}
+
+table {
+    color: #ffffff;
+    width: 100%;
+}
+
+th {
+    background-color: #202020;
+    padding: 1em;
+}
+
+td {
+    background-color: #323232;
+}
+
+.table-content {
+    max-height: 3rem;
+    overflow-y: scroll;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.table-button {
+    margin: 0;
+    padding: 1em;
+    color: #323232;
+    border-radius: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button {
+    background: orange;
+}
+
+.delete-button {
+    background: orangered;
+}
+
+.insert-button {
+    background: #B0FF9D;
+    color: #000000;
+}
+
+.item-actions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup .button {
+    float: right;
+    margin-left: 0.5em;
+}
+
+.empty-table {
+    padding: 1rem;
+}

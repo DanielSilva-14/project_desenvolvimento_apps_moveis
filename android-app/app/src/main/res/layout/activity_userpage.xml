@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userpage">
+
+    <!-- Gradient Background -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:src="@drawable/gradient_background"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/back"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/profiletitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Profile"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/summithublogo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@drawable/logo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userimage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:padding="6dp"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/black"
+        app:srcCompat="@drawable/baseline_person_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/userimage"
+        android:layout_alignBottom="@+id/userimage"
+        android:layout_marginEnd="-8dp"
+        android:layout_marginBottom="-8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:fabCustomSize="35dp"
+        app:srcCompat="@drawable/baseline_photo_camera_24"
+        />
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Fullname"
+        android:textSize="18sp"
+        android:layout_marginTop="270dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="28dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/useremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Email"
+        android:textSize="18sp"
+        android:layout_marginTop="360dp"
+        android:layout_marginStart="28dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/usernametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="18sp"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="28dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="18sp"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="28dp"
+        android:textColor="@android:color/black" />
+
+
+    <Button
+        android:id="@+id/buttonlogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="155dp"
+        android:backgroundTint="@color/lightblue"
+        android:layout_centerHorizontal="true"
+        android:text="Logout" />
+
+    <!-- Bottom Navigation Icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/articleIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/articale" />
+
+        <ImageView
+            android:id="@+id/qrIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/qr" />
+
+        <ImageView
+            android:id="@+id/scheduleIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shcedule" />
+
+        <ImageView
+            android:id="@+id/mapIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/map" />
+
+    </LinearLayout>
+
+</RelativeLayout>

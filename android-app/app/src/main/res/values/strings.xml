@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Project_DAM</string>
+    <!-- res/values/strings.xml -->
+
+    <string-array name="spinner_items">
+        <item>Professional Situation</item>
+        <item>Retired</item>
+        <item>Unemployed</item>
+        <item>Employee</item>
+        <item>Student</item>
+    </string-array>
+    <string name="title_activity_maps">Maps</string>
+    <string name="title_activity_map">Map</string>
+    <string name="view_pdf">View PDF</string>
+
+    <string name="url">http://192.168.1.95/rooms/rooms.php/rooms</string>
+
+</resources>
+

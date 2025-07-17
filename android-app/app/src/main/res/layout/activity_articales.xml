@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homepage">
+
+    <!-- Gradient Background -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:src="@drawable/gradient_background"
+        android:scaleType="fitXY"/>
+
+    <!-- User Profile Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/homepageUserImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/baseline_person_24"
+        app:shapeAppearanceOverlay="@style/circular" />
+
+    <!-- SummitHub Logo -->
+    <TextView
+        android:id="@+id/textViewSummitHubHomepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SummitHub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Notification Icon -->
+    <ImageView
+        android:id="@+id/summithublogo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search articles"
+        android:inputType="text"
+        android:padding="10dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="30dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/articlesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="155dp"
+        android:layout_marginBottom="88dp"
+        android:scrollbars="vertical"/>
+
+
+    <!-- Bottom Navigation Icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/articleIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/articaleclick" />
+
+        <ImageView
+            android:id="@+id/qrIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/qr" />
+
+        <ImageView
+            android:id="@+id/scheduleIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shcedule" />
+
+        <ImageView
+            android:id="@+id/mapIcon"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/map" />
+
+    </LinearLayout>
+
+</RelativeLayout>

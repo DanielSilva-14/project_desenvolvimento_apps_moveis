@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/border"
+    android:layout_marginBottom="35dp">
+
+    <TextView
+        android:id="@+id/daytv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Day"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/titletv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Session"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/timetv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_marginBottom="5dp"/>
+
+
+    <TextView
+        android:id="@+id/roomtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Room" />
+
+    <LinearLayout
+        android:id="@+id/articlesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/article1titletv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Article"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/author1tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/article2titletv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Article"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/author2tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:layout_marginStart="15dp" />
+
+</LinearLayout>
